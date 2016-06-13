@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot and Thymeleaf example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>Spring Boot and Thymeleaf, part 3 - SPRING DATA JPA</h3>
+	<p th:each="thing : ${things}">
+		<h4>ID:</h4>
+		<div th:text="${thing.id}"></div>
+		<h4>Title:</h4>
+		<div th:text="${thing.title}"></div>
+		<h4>Content:</h4>
+		<div th:text="${thing.content}"></div>
+		<a th:href="@{/delete/__${thing.id}__}">删除</a>
+		<div>---------------------------------------------------------</div>
+	</p>
+</body>
+</html>

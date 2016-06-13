@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot and Thymeleaf example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>Spring Boot and Thymeleaf, part 3 - SPRING DATA JPA</h3>
+	<p th:each="post : ${posts}">
+		<h4>ID:</h4>
+		<div th:text="${post.id}"></div>
+		<h4>Title:</h4>
+		<div th:text="${post.title}"></div>
+		<h4>Content:</h4>
+		<div th:text="${post.content}"></div>
+		<div>---------------------------------------------------------</div>
+	</p>
+</body>
+</html>
